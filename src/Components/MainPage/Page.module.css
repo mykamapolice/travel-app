@@ -1,0 +1,12 @@
+.mainPage {
+  height: 100%;
+  background-color: rgb(58, 247, 174);
+}
+
+.container {
+  display: block;
+  width: 1024px;
+  margin: 0 auto;
+  background: rgb(11, 143, 77);
+  height: 100%;
+}
