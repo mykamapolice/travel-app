@@ -6,7 +6,8 @@ import Preloader from '../Preloader/Preloader';
 
 const { Meta } = Card;
 
-const CountriesList = ({ loading,
+const CountriesList = ({ 
+	loading,
 	getCountries,
 	countriesList,
 	text,
@@ -52,7 +53,7 @@ const CountriesList = ({ loading,
 					>
 						<Meta style={{ textAlign: 'center' }}
 							title={setExcretion(el.name, text)}
-							description={setExcretion(el.name, text)}
+							description={setExcretion(el.capital, text)}
 						/>
 					</Card>
 				</NavLink>
