@@ -56,7 +56,7 @@ const MapStateToProps = ({ langReducer,
   const countriesArray = countries.map((el:any)=>{
     return {
       name: el[`name${langReducer.toUpperCase()}`],
-      capital : el.capital[langReducer].toLowerCase(),
+      capital : el.capital[langReducer],
       photo : el.photo,
       nameEN : el.nameEN
     };
