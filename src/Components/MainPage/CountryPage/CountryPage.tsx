@@ -66,8 +66,8 @@ const CountryPage = ({ link, lang,
     </div>
     <div className={css.bottomBlock}><div className={css.video}>
       <Video url={countryDetails.videoURL} />
-    </div><div className={css.info}><Text>{countryDetails.info[lang]}
-    </Text></div></div>
+    </div><div className={css.info}><span>{countryDetails.info[lang]}</span>
+    </div></div>
     </>
       :
       <div style={{

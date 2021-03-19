@@ -17,7 +17,8 @@ img {
 }
 
 .leftBlock{
-margin-top:30px
+margin-top:30px;
+min-width: 285px;
 }
 
 .gallery{
@@ -32,6 +33,7 @@ margin-top:30px
   margin-top:20px;
    display:flex;
    justify-content:space-between;
+   vertical-align: middle;
 }
 
 .video{
@@ -40,7 +42,22 @@ margin-top:30px
 
 .info{
   width:50%;
+  display:flex; 
+  align-items:center;
+  padding: 0 35px;
 }
+
+.info span {
+  font-size: 20px;
+  display: inline-block;
+  overflow: hidden;
+  color: rgba(0,212,255,1);
+  transition: all 1s;
+}
+
+.info span:hover {
+  color: rgba(114,109,177,1);
+  }
 
 .button {
   background-color: Transparent;
@@ -86,10 +103,12 @@ margin-top:30px
      flex-direction: column;
     }
     .info{
+      width: 90%;
       margin: 0 auto;
       order:1;
     }
     .video{
+      width: 90%;
       margin: 0 auto;
       order:2;
     }
@@ -97,9 +116,4 @@ margin-top:30px
 }
 
 
-@media(max-width:900px){
-  .adaptive-handler{
-    width:600px;
-  }
-}
 

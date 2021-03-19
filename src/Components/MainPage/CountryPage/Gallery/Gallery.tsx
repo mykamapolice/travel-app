@@ -6,40 +6,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 function Gallery(props: any) {
-  // const settings = {
-  //   responsive: [
-  //     {
-  //       breakpoint: 700,
-  //       settings: {
-  //         arrows: false,
-  //         slidesToShow: 3,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 500,
-  //       settings: {
-  //         arrows: false,
-  //         slidesToShow: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 400,
-  //       settings: {
-  //         arrows: false,
-  //         slidesToShow: 1,
-  //       },
-  //     },
-  //   ],
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   arrows: true,
-
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   prevArrow: <SlickArrowLeft />,
-  //   nextArrow: <SlickArrowRight />,
-  // };
 
   const [nav1, setNav1] = useState<any>(null);
   const [nav2, setNav2] = useState<any>(null);
@@ -52,7 +18,6 @@ function Gallery(props: any) {
 
   useEffect(() => {
     setNav2(slider2);
-    // return () => setNav2(slider2);
   }, [slider2]);
 
   const settingsMain = {
@@ -63,6 +28,26 @@ function Gallery(props: any) {
     swipeToSlide: true,
     asNavFor: nav1,
     speed: 600,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          arrows: false
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          arrows: false
+        },
+      },
+    ],
 
   };
 
@@ -70,37 +55,13 @@ function Gallery(props: any) {
     slidesToShow: 2,
     slidesToScroll: 1,
     asNavFor: nav2,
-    arrows: true,
+    arrows: false,
     dots: true,
     centerMode: true,
     swipeToSlide: true,
     focusOnSelect: true,
     centerPadding: '10px',
-    adaptiveHeight: true,
-
-    responsive: [
-      {
-        breakpoint: 700,
-        settings: {
-          arrows: false,
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-        },
-      },
-    ],
+    
   };
   const { views, lang } = props;
   return (
@@ -115,11 +76,11 @@ function Gallery(props: any) {
             <div className="slick-slide " key={v.viewName[lang]}>
               <h2 className="slick-slide-title">{v.viewName[lang]}</h2>
               <img
-                className="slick-slide-image"
+                className="slick-slide-image bigImage"
                 src={`${v.imgURL}`}
                 alt={`${v.viewName[lang]}`}
               />
-              <div className="slick-slide-label">{v.about[lang]}</div>
+              <div className="slick-slide-label"><span>{v.about[lang]}</span></div>
             </div>
           );
         })}
