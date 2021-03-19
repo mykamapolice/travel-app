@@ -1,0 +1,20 @@
+.footer {
+  position: fixed;
+  bottom:0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0;
+   height: 4rem;
+  background: linear-gradient(90deg, rgba(84,82,108,1) 0%, rgba(50,149,116,1) 36%, rgba(102,184,162,1) 73%, rgba(0,212,255,1) 100%);
+}
+.img-footer {
+  height: 3rem;
+}
+
+a.footer__author-link {
+  color: #241624;
+}

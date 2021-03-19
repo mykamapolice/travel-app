@@ -1,0 +1,11 @@
+.mainPage {
+  height: 100%;
+  margin-top:70px;
+  margin-bottom: 70px;
+}
+
+@media(max-width:576px){
+  .mainPage {
+    margin-top:100px;  
+  }
+}

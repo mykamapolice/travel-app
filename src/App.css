@@ -1,0 +1,9 @@
+
+.mark{
+  background-color:yellow;
+}
+.footer {
+  display: flex;
+  background: linear-gradient(90deg, rgba(84,82,108,1) 0%, rgba(50,149,116,1) 36%, rgba(102,184,162,1) 73%, rgba(0,212,255,1) 100%);
+}
+
