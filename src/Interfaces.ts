@@ -26,8 +26,8 @@ export interface ISearchInput {
 }
 
 export interface IInitialStateType {
-  loading: boolean,
-  error: null,
+  loading: boolean;
+  error: null;
   countries: ICountries[];
 }
 
@@ -53,4 +53,15 @@ export interface IMapProps {
 
 export interface ICurrenciesProps {
   currency: string;
+}
+
+interface IUserData {
+  username: string;
+  token: string;
+}
+
+export interface IUser {
+  currentUser: IUserData;
+  serverMessage: string;
+  isAuth: boolean;
 }
